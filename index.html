@@ -144,19 +144,8 @@
             <p>Job: entry-level garant</p>
         </div>
     </div>
-        <!-- Видео с контролами -->
-    <video id="myVideo" controls>
-        <source src="video.mp4" type="video/mp4">
-    </video>
-
-    <script>
-        document.addEventListener("click", function () {
-            let bgVideo = document.getElementById("bg-video");
-            bgVideo.muted = false; // Включаем звук
-            bgVideo.play();
-        }, { once: true });
-
-        document.getElementById("myVideo").volume = 1.0;
-    </script>
+     <video autoplay muted loop id="bg-video" preload="auto">
+        <source src="https://0x0.st/8PC3.mp4" type="video/mp4">
+     </video>
 </body>
 </html>
