@@ -76,6 +76,35 @@
             color: #000;
         }
 
+        .btn-new:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 200px;
+            background: #fff;
+            opacity: 0.5;
+            position: absolute;
+            left: -40px;
+            top: -100px;
+            transform: rotate(45deg);
+            animation: slideme 3s ease-in-out infinite;
+        }
+
+        @keyframes slideme {
+            0% {
+                left: -30px;
+                margin-left: 0px;
+            }
+            30% {
+                left: 110%;
+                margin-left: 80px;
+            }
+            100% {
+                left: 110%;
+                margin-left: 80px;
+            }
+        }
+
         .about-container {
             margin-top: 30px;
             background: rgba(50, 50, 50, 0.7);
@@ -98,9 +127,9 @@
 <body>
     <div class="container">
         <div class="avatar">
-            <img src="https://i.postimg.cc/4dM1dkqF/14bac078c185fd23559738576dc2a669.jpg" alt="My Avatar">
+           <img src="https://i.postimg.cc/4dM1dkqF/14bac078c185fd23559738576dc2a669.jpg" alt="My Avatar">
         </div>
-        <a href="https://t.me/Pmblq_antiscam" class="link">t.me/Pmblq_antiscam</a>
+        <a href="https://t.me/Pmblq_antiscam/ class="link">t.me/Pmblq_antiscam</a>
         <div class="buttons">
             <button class="btn-new" onclick="window.open('https://t.me/infobyboost')">Channel</button>
         </div>
@@ -109,16 +138,25 @@
             <hr>
             <p>Name: Mark</p>
             <p>Nickname: Boostek.</p>
-            <p>Age: 17 y.o.</p>
+            <p>Age 17 y. o.</p>
             <p>Gender: Male | he/him</p>
             <p>Hobbies: anime & sleep.</p>
             <p>Job: entry-level garant</p>
         </div>
     </div>
-
-    <!-- Видео на фоне -->
-    <video id="bg-video" autoplay loop>
-        <source src="https://upload.kshteam.top/u/yKQwqY4.jpg" type="video/mp4">
+        <!-- Видео с контролами -->
+    <video id="myVideo" controls>
+        <source src="video.mp4" type="video/mp4">
     </video>
+
+    <script>
+        document.addEventListener("click", function () {
+            let bgVideo = document.getElementById("bg-video");
+            bgVideo.muted = false; // Включаем звук
+            bgVideo.play();
+        }, { once: true });
+
+        document.getElementById("myVideo").volume = 1.0;
+    </script>
 </body>
 </html>
